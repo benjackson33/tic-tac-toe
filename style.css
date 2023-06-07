@@ -3,8 +3,10 @@
 }
 
 body {
-    background-color: lightblue;
-}
+    height: 100%;
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, rgb(238, 92, 14), rgb(228, 199, 55));
+  }
 
 .gameboard-container {
     display: grid;
@@ -12,26 +14,39 @@ body {
     grid-template-rows: 100px 100px 100px;
     justify-content: center;
     gap: 2px;
-    
+
 }
 
 
-h1 {
+.title,
+.text-shadow-pop-tr {
+
     text-align: center;
-    font-family: 'Audiowide', cursive;
-}
+    justify-content: flex-start;
+    font-family: 'Original Surfer', cursive;
 
+}
+    
 .gameboard-item {
     border-radius: 10px;
-    color: blueviolet;
     font-size: 60px;
+    opacity: 100%;
 }
 
 .gameboard-item:hover {
     background-color: lightpink;
-    
+
 }
 
+.play-again {
+    font-family: 'Original Surfer', cursive;    
+    
+    
+}
+.winner {
 
+    font-family: 'Original Surfer', cursive;
+    text-align: center;
 
+}
 

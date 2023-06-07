@@ -9,13 +9,12 @@ let btn8 = document.getElementById('btn8')
 let btn9 = document.getElementById('btn9')
 
 
-const gridBtns = document.querySelectorAll('.gameboard-container')
+const gridBtns = document.querySelectorAll('.gameboard-item')
 
 const playAgain = document.querySelector('.play-again')
 
-const playerO = "O"
-const playerX = "X"
-let clicks = 0
+const playerO = "🏄‍♂️"
+const playerX = "🌊"
 
 
 for (let btn of gridBtns) {
@@ -40,7 +39,7 @@ function handleChoice(event) {
         btn.innerText = playerX
     }
 
-    // theWinner()
+    theWinner()
     // console.log(btn1 === "O");
 
 }
@@ -51,7 +50,8 @@ const winnerBtns = [
     [1, 4, 7], [2, 5, 8],
     [1, 2, 3], [4, 5, 6],
     [7, 8, 9], [1, 5, 9],
-    [3, 5, 7]]
+    [3, 5, 7], [3, 6, 9]
+]
 
 
 
@@ -59,24 +59,44 @@ const winnerBtns = [
 //     console.log(winnerBtns[i]);
 // }
 
-
-
-
-
 function theWinner() {
-    for (btns of winnerBtns) {
-        let combo = btns
+    for (btn of winnerBtns) {
 
-        if ()
-        
-        console.log(combo[0]);
-        console.log(combo[1]);
-        console.log(combo[2]);
+
+
+        let condition1 = btn[0]
+        let condition2 = btn[1]
+        let condition3 = btn[2]
+        let c1 = gridBtns[condition1 - 1]
+        let c2 = gridBtns[condition2 - 1]
+        let c3 = gridBtns[condition3 - 1]
+        console.log(c1.innerText);
+        console.log(c2.innerText);
+        console.log(c3.innerText);
+        if (c1.innerText === "🏄‍♂️" && c2.innerText === "🏄‍♂️" && c3.innerText === "🏄‍♂️") {
+            console.log("🏄‍♂️ Wins");
+        } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
+            console.log("🌊 Wins");
+        }
+
     }
 
-    
+
 }
-theWinner()
+
+function endGame() {
+    for (let button of gridBtns) {
+        button.disabled = true
+        // btn.removeEventListener('click', handleChoice)
+    }
+
+}
+
+
+
+
+
+
 // // }
 
 
@@ -91,5 +111,7 @@ theWinner()
 
 //     }
 // }
+
+
 
 

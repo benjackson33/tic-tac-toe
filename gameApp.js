@@ -16,6 +16,8 @@ const playAgain = document.querySelector('.play-again')
 const playerO = "🏄‍♂️"
 const playerX = "🌊"
 
+playAgain.addEventListener('click', handlePlayAgain)
+
 
 for (let btn of gridBtns) {
     btn.addEventListener('click', handleChoice)

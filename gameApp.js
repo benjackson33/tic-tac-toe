@@ -27,7 +27,6 @@ function handleChoice(event) {
     let btn = event.target
     btn.disabled = true
     clicks++
-    console.log(clicks);
 
     whapaPlay()
 
@@ -65,14 +64,14 @@ function theWinner() {
             winnerMessage.innerText = `Gnarly! ${playerO} conquered the ${playerX}`
             endGame()
             awesomePlay()
-            
+
 
         } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
             winnerMessage.innerText = `WOAH! The ${playerX} wiped out the ${playerO}`
 
             endGame()
             noWayPlay()
-            
+
 
         }
     }
@@ -115,16 +114,34 @@ function awesomePlay() {
     awesome.play()
 }
 
+let isPlaying = false
+
+let waves = new Audio('./waves.m4a');
 function handleOcean() {
-    let waves = new Audio('./waves.m4a')
-    waves.volume = 0.2
-    waves.play()
+    waves.volume = 0.2;
+    if (isPlaying === false) {
+        isPlaying = true
+        waves.play()
+    } else {
+        isPlaying = false
+        waves.pause()
+        
+    }
 }
 
-function handleRock(){
-    let rock = new Audio('./SurfarisWipeOut.m4a')
-    rock.volume = 0.1
-    rock.play()
+
+let rock = new Audio('./SurfarisWipeOut.m4a')
+function handleRock() {
+    
+    rock.volume = 0.1;
+    if (isPlaying === false) {
+        isPlaying = true
+        rock.play()
+    } else {
+        isPlaying = false
+        rock.pause()
+        
+    }
 }
 
 function draw() {

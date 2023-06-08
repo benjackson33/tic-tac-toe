@@ -9,11 +9,9 @@
 // let btn9 = document.getElementById('btn9')
 
 const winnerMessage = document.querySelector(".winner-message")
-
-
-const gridBtns = document.querySelectorAll('.gameboard-item')
-
+let gridBtns = document.querySelectorAll('.gameboard-item')
 const playAgain = document.querySelector('.play-again')
+
 playAgain.addEventListener('click', handlePlayAgain)
 
 
@@ -21,6 +19,7 @@ playAgain.addEventListener('click', handlePlayAgain)
 const playerO = "🏄‍♂️"
 const playerX = "🌊"
 
+let clicks = 0
 
 
 for (let btn of gridBtns) {
@@ -35,6 +34,8 @@ function handleChoice(event) {
     let btn = event.target
     btn.disabled = true
     // console.log(btn);
+    clicks++
+    console.log(clicks);
 
 
     whapaPlay()
@@ -48,6 +49,7 @@ function handleChoice(event) {
         btn.innerText = playerX
     }
 
+    draw()
     theWinner();
 
     // console.log(btn1 === "O");
@@ -67,34 +69,34 @@ function theWinner() {
     for (btn of winnerBtns) {
 
 
-
         let condition1 = btn[0]
         let condition2 = btn[1]
         let condition3 = btn[2]
         let c1 = gridBtns[condition1 - 1]
         let c2 = gridBtns[condition2 - 1]
         let c3 = gridBtns[condition3 - 1]
-        console.log(c1.innerText);
-        console.log(c2.innerText);
-        console.log(c3.innerText);
         if (c1.innerText === "🏄‍♂️" && c2.innerText === "🏄‍♂️" && c3.innerText === "🏄‍♂️") {
             winnerMessage.innerText = `Oh gnarly. ${playerO} wins`
-            // alert("🏄‍♂️ Wins");
             endGame()
-            youWon()
+            // youWon()
+            noWayPlay()
+            
         } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
             winnerMessage.innerText = `Sick! ${playerX} wins`
-            // alert("🌊 Wins");
+
             endGame()
-            youWon()
-
-
+            // youWon()
+            awesomePlay()
+            
         }
-
+        
     }
 
-
+    
+  
 }
+
+
 
 function endGame() {
     for (let button of gridBtns) {
@@ -111,22 +113,39 @@ function handlePlayAgain() {
         btn.disabled = false
         btn.innerText = null
         winnerMessage.innerText = ""
+        clicks = 0
     }
 }
 
-function youWon() {
-    if (classList.contains("winner")) {
-        classList.remove('winner')
-    } else {
-        classList.add('winner')
-    }
-}
+// function youWon() {
+//     if (classList.contains("winner")) {
+//         classList.remove('winner')
+//     } else {
+//         classList.add('winner')
+//     }
+// }
 
 function whapaPlay() {
     let whapa = new Audio('./whapa.m4a')
     whapa.play()
 }
 
+function noWayPlay() {
+    let noWay = new Audio('./noWay.m4a')
+    noWay.play();
+}
+
+function awesomePlay() {
+    let awesome = new Audio('./thatsAwesome.m4a')
+    awesome.play()
+}
+
+function draw() {
+    for(buttons of gridBtns)
+    if (clicks === 9 &&  buttons != ("")) {
+        winnerMessage.innerText = ("Draw")
+    }
+}
 
 
 

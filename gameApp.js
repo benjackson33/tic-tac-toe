@@ -1,12 +1,12 @@
-let btn1 = document.getElementById('btn1')
-let btn2 = document.getElementById('btn2')
-let btn3 = document.getElementById('btn3')
-let btn4 = document.getElementById('btn4')
-let btn5 = document.getElementById('btn5')
-let btn6 = document.getElementById('btn6')
-let btn7 = document.getElementById('btn7')
-let btn8 = document.getElementById('btn8')
-let btn9 = document.getElementById('btn9')
+// let btn1 = document.getElementById('btn1')
+// let btn2 = document.getElementById('btn2')
+// let btn3 = document.getElementById('btn3')
+// let btn4 = document.getElementById('btn4')
+// let btn5 = document.getElementById('btn5')
+// let btn6 = document.getElementById('btn6')
+// let btn7 = document.getElementById('btn7')
+// let btn8 = document.getElementById('btn8')
+// let btn9 = document.getElementById('btn9')
 
 const winnerMessage = document.querySelector(".winner-message")
 
@@ -37,7 +37,7 @@ function handleChoice(event) {
     // console.log(btn);
 
 
-
+    whapaPlay()
 
 
     if (playerOne === false) {
@@ -81,10 +81,12 @@ function theWinner() {
             winnerMessage.innerText = `Oh gnarly. ${playerO} wins`
             // alert("🏄‍♂️ Wins");
             endGame()
+            youWon()
         } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
-            winnerMessage.innerText = `Oh gnarly. ${playerX} wins`
+            winnerMessage.innerText = `Sick! ${playerX} wins`
             // alert("🌊 Wins");
             endGame()
+            youWon()
 
 
         }
@@ -108,21 +110,22 @@ function handlePlayAgain() {
     for (let btn of gridBtns) {  //current disables but not clears
         btn.disabled = false
         btn.innerText = null
-         winnerMessage.innerText = ""
+        winnerMessage.innerText = ""
     }
 }
 
-// function youWon() {
-//     if (classList.contains("winner"))
-//         classList.remove('winner')
-// } else {
-//     classList.add('winner')
-// }
+function youWon() {
+    if (classList.contains("winner")) {
+        classList.remove('winner')
+    } else {
+        classList.add('winner')
+    }
+}
 
-// function whapaPlay(){
-//     let whapa = new Audio('../benjackson/Downloads/whapa.m4a')
-//     Audio.play()
-// }
+function whapaPlay() {
+    let whapa = new Audio('./whapa.m4a')
+    whapa.play()
+}
 
 
 

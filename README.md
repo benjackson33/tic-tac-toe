@@ -1,6 +1,6 @@
 
 
-# Project Title
+# Tic-Tac-Woah
 
 Tic-Tac-Woah, the most bodacious of games!
 

@@ -37,7 +37,7 @@ Or chill out with some ocean sounds, same spot. Stay mellow.
 
 The whole theme of Tic-Tac-Woah was born from writing woah instead of toe. I knew right away that when "woah" displayed on the screen that this would be the most bodacious of themes to run with and it ran away from **me**.
 
-Come across a couple of hiccups on the road to gnardom, the most tricky part being coding who came out on top, 🏄‍♂️ or 🌊! Working through the code logging and reivisng to ensure all variables where containg the data they should be, I would like to stream line this area too. The draw function is also a bit messy and would like to smoothen that out.
+Come across a couple of hiccups on the road to gnardom, the most tricky part being coding who came out on top, 🏄‍♂️ or 🌊! Working through the code logging and revisng to ensure all variables where containg the data they should be, I would like to stream line this area too. The draw function is also a bit messy and would like to smoothen that out.
 
 New features would also be gnarly, like a option to choose your shredder. 
 

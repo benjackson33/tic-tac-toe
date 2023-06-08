@@ -9,7 +9,7 @@ Tic-Tac-Woah, the most bodacious of games!
 
 ## Description
 
-The gnarliest of all tic-tac-toe's on the internet. Two player game, shred the gnar and conquer the wave or get wiped out by your oponent. Kooks only.
+The gnarliest of all tic-tac-toe's on the internet. Two player game, shred the gnar and conquer the wave or get wiped out by your oponent. Kooks only. 🤙
 
 ## Getting Started
 

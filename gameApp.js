@@ -8,12 +8,16 @@
 // let btn8 = document.getElementById('btn8')
 // let btn9 = document.getElementById('btn9')
 
+
+
+
 const winnerMessage = document.querySelector(".winner-message")
 let gridBtns = document.querySelectorAll('.gameboard-item')
 const playAgain = document.querySelector('.play-again')
+const oceanBtn = document.querySelector('.ocean-sound')
 
 playAgain.addEventListener('click', handlePlayAgain)
-
+oceanBtn.addEventListener('click', handleOcean)
 
 
 const playerO = "🏄‍♂️"
@@ -117,13 +121,6 @@ function handlePlayAgain() {
     }
 }
 
-// function youWon() {
-//     if (classList.contains("winner")) {
-//         classList.remove('winner')
-//     } else {
-//         classList.add('winner')
-//     }
-// }
 
 function whapaPlay() {
     let whapa = new Audio('./whapa.m4a')
@@ -138,6 +135,12 @@ function noWayPlay() {
 function awesomePlay() {
     let awesome = new Audio('./thatsAwesome.m4a')
     awesome.play()
+}
+
+function handleOcean() {
+    let waves = new Audio('./waves.m4a')
+    waves.volume = 0.2
+    waves.play()
 }
 
 function draw() {

@@ -46,6 +46,7 @@ New features would also be gnarly, like a option to choose your shredder.
 Music and ocean sound buttons need fixing. Only click one, once. 
 
 
+## Screen shots
 ![Alt text](./images/tic-tac-woah1.png?raw=true)
 
 ![Alt text](./images/tic-tac-woah2.png?raw=true)

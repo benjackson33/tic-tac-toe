@@ -28,16 +28,10 @@ Or chill out with some ocean sounds. Stay mellow.
 - CSS
 - HTML
 
+# Known Issues
 
-code blocks for commands
-```
-
-## Help
-
-```
 Music and ocean sound buttons need fixing. Only click one, once. 
 
-```
 
 ![Alt text](./images/tic-tac-woah1.png?raw=true)
 

@@ -45,7 +45,7 @@ Come across a couple of hiccups on the road to gnardom, the most tricky part bei
 
 ### Known Issues in Tic-Tac-Woah v  1.0
 
-- Music and ocean sound buttons need fixing. Only click one, once. **FIXED**
+- ~~Music and ocean sound buttons need fixing. Only click one, once.~~ **FIXED**
 
 
 ## Screen shots

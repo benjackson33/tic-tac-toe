@@ -24,10 +24,8 @@ for (let btn of gridBtns) {
 let playerOne = false
 
 function handleChoice(event) {
-    // console.log(event.target.innerText);
     let btn = event.target
     btn.disabled = true
-    // console.log(btn);
     clicks++
     console.log(clicks);
 
@@ -64,17 +62,17 @@ function theWinner() {
         let c2 = gridBtns[condition2 - 1]
         let c3 = gridBtns[condition3 - 1]
         if (c1.innerText === "🏄‍♂️" && c2.innerText === "🏄‍♂️" && c3.innerText === "🏄‍♂️") {
-            winnerMessage.innerText = `Gnarly! ${playerO} wins`
+            winnerMessage.innerText = `Gnarly! ${playerO} conquered the ${playerX}`
             endGame()
-            // youWon()
-            noWayPlay()
+            awesomePlay()
+            
 
         } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
-            winnerMessage.innerText = `Sick! ${playerX} wins`
+            winnerMessage.innerText = `WOAH! The ${playerX} wiped out the ${playerO}`
 
             endGame()
-            // youWon()
-            awesomePlay()
+            noWayPlay()
+            
 
         }
     }

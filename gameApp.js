@@ -2,9 +2,12 @@ const winnerMessage = document.querySelector(".winner-message")
 let gridBtns = document.querySelectorAll('.gameboard-item')
 const playAgain = document.querySelector('.play-again')
 const oceanBtn = document.querySelector('.ocean-sound')
+const rockBtn = document.querySelector('.surf-rock')
 
 playAgain.addEventListener('click', handlePlayAgain)
 oceanBtn.addEventListener('click', handleOcean)
+rockBtn.addEventListener('click', handleRock)
+
 
 
 const playerO = "🏄‍♂️"
@@ -120,10 +123,16 @@ function handleOcean() {
     waves.play()
 }
 
+function handleRock(){
+    let rock = new Audio('./SurfarisWipeOut.m4a')
+    rock.volume = 0.1
+    rock.play()
+}
+
 function draw() {
     for (buttons of gridBtns)
         if (clicks === 9 && buttons != ("")) {
-            winnerMessage.innerText = ("Bogus, you drew")
+            winnerMessage.innerText = ("Bogus, you kooks drew")
         }
 }
 

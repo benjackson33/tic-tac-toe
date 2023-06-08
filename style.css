@@ -151,16 +151,17 @@ body {
 
 .gameboard-item {
     border-radius: 10px;
-    border: 3px solid #0fa;
+    border: 3px solid rgb(229, 229, 68);
     font-size: 60px;
     /* background-color: rgb(0, 162, 255); */
     opacity: 1;
+    background-color: aquamarine;
 }
 
-.gameboard-item:disabled {
+/* .gameboard-item:disabled {
    
     opacity: 1
-}
+} */
 
 .gameboard-item:hover {
     background:
@@ -170,7 +171,7 @@ body {
 
 }
 
-.ocean-sound {
+.ocean-sound, .surf-rock {
     border-radius: 10px;
     background-color: #7fcdff;
 

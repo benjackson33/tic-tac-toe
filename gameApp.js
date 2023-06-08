@@ -1,16 +1,3 @@
-// let btn1 = document.getElementById('btn1')
-// let btn2 = document.getElementById('btn2')
-// let btn3 = document.getElementById('btn3')
-// let btn4 = document.getElementById('btn4')
-// let btn5 = document.getElementById('btn5')
-// let btn6 = document.getElementById('btn6')
-// let btn7 = document.getElementById('btn7')
-// let btn8 = document.getElementById('btn8')
-// let btn9 = document.getElementById('btn9')
-
-
-
-
 const winnerMessage = document.querySelector(".winner-message")
 let gridBtns = document.querySelectorAll('.gameboard-item')
 const playAgain = document.querySelector('.play-again')
@@ -31,7 +18,7 @@ for (let btn of gridBtns) {
 
 }
 
-playerOne = false
+let playerOne = false
 
 function handleChoice(event) {
     // console.log(event.target.innerText);
@@ -41,9 +28,7 @@ function handleChoice(event) {
     clicks++
     console.log(clicks);
 
-
     whapaPlay()
-
 
     if (playerOne === false) {
         playerOne = true
@@ -55,9 +40,6 @@ function handleChoice(event) {
 
     draw()
     theWinner();
-
-    // console.log(btn1 === "O");
-
 }
 
 //DECIDE THE WINNER
@@ -72,7 +54,6 @@ const winnerBtns = [
 function theWinner() {
     for (btn of winnerBtns) {
 
-
         let condition1 = btn[0]
         let condition2 = btn[1]
         let condition3 = btn[2]
@@ -80,24 +61,20 @@ function theWinner() {
         let c2 = gridBtns[condition2 - 1]
         let c3 = gridBtns[condition3 - 1]
         if (c1.innerText === "🏄‍♂️" && c2.innerText === "🏄‍♂️" && c3.innerText === "🏄‍♂️") {
-            winnerMessage.innerText = `Oh gnarly. ${playerO} wins`
+            winnerMessage.innerText = `Gnarly! ${playerO} wins`
             endGame()
             // youWon()
             noWayPlay()
-            
+
         } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
             winnerMessage.innerText = `Sick! ${playerX} wins`
 
             endGame()
             // youWon()
             awesomePlay()
-            
-        }
-        
-    }
 
-    
-  
+        }
+    }
 }
 
 
@@ -144,29 +121,16 @@ function handleOcean() {
 }
 
 function draw() {
-    for(buttons of gridBtns)
-    if (clicks === 9 &&  buttons != ("")) {
-        winnerMessage.innerText = ("Draw")
-    }
+    for (buttons of gridBtns)
+        if (clicks === 9 && buttons != ("")) {
+            winnerMessage.innerText = ("Bogus, you drew")
+        }
 }
 
 
 
 
-// // }
 
-
-// function theWinner() {
-//     if (btn1.innerText === "O" && btn4.innerText === "O" && btn7.innerText === "O") {
-//         console.log("O is the winner");
-//     } else if (btn3.innerText === "O" && btn6.innerText === "O" && btn9.innerText === "O") {
-//         console.log("O is the winner");
-//     } else if (btn2.innerText === "O" && btn5.innerText === "O" && btn8.innerText === "O") {
-
-//     } else if (btn1.innerText === "O" && btn4.innerText === "O" && btn7.innerText === "O") {
-
-//     }
-// }
 
 
 

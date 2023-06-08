@@ -43,7 +43,7 @@ New features would also be gnarly, like a option to choose your shredder.
 
 ### Known Issues in Tic-Tac-Woah v  1.0
 
-Music and ocean sound buttons need fixing. Only click one, once. 
+- Music and ocean sound buttons need fixing. Only click one, once. **FIXED**
 
 
 ## Screen shots

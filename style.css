@@ -85,8 +85,8 @@ body {
     grid-template-rows: 100px 100px 100px;
     justify-content: center;
     gap: 2px;
-    
-    
+
+
 
 }
 
@@ -107,7 +107,7 @@ body {
         0 0 102px #0fa,
         0 0 151px #0fa;
     -webkit-animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 
@@ -155,40 +155,49 @@ body {
     font-size: 60px;
     /* background-color: rgb(0, 162, 255); */
     opacity: 1;
-    background-color: aquamarine;
+    background-color: #7fcdff;
 }
 
-/* .gameboard-item:disabled {
-   
-    opacity: 1
-} */
 
 .gameboard-item:hover {
     background:
-    linear-gradient(to right, rgb(240, 227, 82), transparent),
-    url(https://grainy-gradients.vercel.app/noise.svg);
+        linear-gradient(to right, rgb(240, 227, 82), transparent),
+        url(https://grainy-gradients.vercel.app/noise.svg);
     /* background-color: rgb(240, 227, 82); */
 
 }
 
-.ocean-sound, .surf-rock {
+.surf-rock:hover {
+    background-color: rgb(240, 227, 82);
+    color: #dc47d2;
+}
+
+.ocean-sound:hover {
+    background-color: rgb(240, 227, 82);
+    color: #dc47d2;
+}
+
+.ocean-sound,
+.surf-rock {
     border-radius: 10px;
     background-color: #7fcdff;
     margin-top: 10px;
+    border: 1px solid aqua;
 
 }
 
-.play-button{
+.play-button {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .play-again {
-    
+
     height: 50px;
     font-size: 30px;
     border-radius: 10px;
+    margin-bottom: 50px;
     background-color: sandybrown;
     color: #dc47d2;
     text-shadow:
@@ -208,37 +217,74 @@ body {
 
 
 .winner-message {
-     text-align: center;
-     -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    text-align: center;
+    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 
 }
 
 
- @-webkit-keyframes tracking-in-contract {
+@-webkit-keyframes tracking-in-contract {
     0% {
-      letter-spacing: 1em;
-      opacity: 0;
+        letter-spacing: 1em;
+        opacity: 0;
     }
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
+
     100% {
-      letter-spacing: normal;
-      opacity: 1;
+        letter-spacing: normal;
+        opacity: 1;
     }
-  }
-  @keyframes tracking-in-contract {
+}
+
+@keyframes tracking-in-contract {
     0% {
-      letter-spacing: 1em;
-      opacity: 0;
+        letter-spacing: 1em;
+        opacity: 0;
     }
+
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
+
     100% {
-      letter-spacing: normal;
-      opacity: 1;
+        letter-spacing: normal;
+        opacity: 1;
     }
-  }
-  
+}
+
+
+.choose {
+    margin: 0 auto;
+    width: 30%;
+}
+
+.choose-title {
+    text-align: center;
+}
+
+.choose-shredder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    /* height: 50px;
+    width: 50px; */
+    /* width: 50px;
+    font-size: 40px; */
+}
+
+.shredder {
+    margin: 5px;
+    font-size: 40px;
+    background:
+    linear-gradient(to right, rgb(240, 227, 82), transparent),
+    url(https://grainy-gradients.vercel.app/noise.svg);
+    border: 1px solid rgb(240, 227, 82);
+    border-radius: 35px;
+
+    
+}

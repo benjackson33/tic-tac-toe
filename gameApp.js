@@ -3,6 +3,7 @@ let gridBtns = document.querySelectorAll('.gameboard-item')
 const playAgain = document.querySelector('.play-again')
 const oceanBtn = document.querySelector('.ocean-sound')
 const rockBtn = document.querySelector('.surf-rock')
+let shredder = document.querySelectorAll('.shredder')
 
 playAgain.addEventListener('click', handlePlayAgain)
 oceanBtn.addEventListener('click', handleOcean)
@@ -10,10 +11,10 @@ rockBtn.addEventListener('click', handleRock)
 
 
 
-const playerO = "🏄‍♂️"
-const playerX = "🌊"
+let playerO = "🏄‍♂️"
+let playerX = "🌊"
 
-let clicks = 0
+let btnClicks = 0
 
 
 for (let btn of gridBtns) {
@@ -26,7 +27,7 @@ let playerOne = false
 function handleChoice(event) {
     let btn = event.target
     btn.disabled = true
-    clicks++
+    btnClicks++
 
     whapaPlay()
 
@@ -60,13 +61,13 @@ function theWinner() {
         let c1 = gridBtns[condition1 - 1]
         let c2 = gridBtns[condition2 - 1]
         let c3 = gridBtns[condition3 - 1]
-        if (c1.innerText === "🏄‍♂️" && c2.innerText === "🏄‍♂️" && c3.innerText === "🏄‍♂️") {
+        if (c1.innerText === playerO && c2.innerText === playerO && c3.innerText === playerO) {
             winnerMessage.innerText = `Gnarly! ${playerO} conquered the ${playerX}`
             endGame()
             awesomePlay()
 
 
-        } else if (c1.innerText === "🌊" && c2.innerText === "🌊" && c3.innerText === "🌊") {
+        } else if (c1.innerText === playerX && c2.innerText === playerX && c3.innerText === playerX) {
             winnerMessage.innerText = `WOAH! The ${playerX} wiped out the ${playerO}`
 
             endGame()
@@ -76,8 +77,6 @@ function theWinner() {
         }
     }
 }
-
-
 
 function endGame() {
     for (let button of gridBtns) {
@@ -94,7 +93,7 @@ function handlePlayAgain() {
         btn.disabled = false
         btn.innerText = null
         winnerMessage.innerText = ""
-        clicks = 0
+        btnClicks = 0
     }
 }
 
@@ -125,14 +124,14 @@ function handleOcean() {
     } else {
         isPlaying = false
         waves.pause()
-        
+
     }
 }
 
 
 let rock = new Audio('./SurfarisWipeOut.m4a')
 function handleRock() {
-    
+
     rock.volume = 0.1;
     if (isPlaying === false) {
         isPlaying = true
@@ -140,18 +139,46 @@ function handleRock() {
     } else {
         isPlaying = false
         rock.pause()
-        
+
     }
 }
 
 function draw() {
     for (buttons of gridBtns)
-        if (clicks === 9 && buttons != ("")) {
+        if (btnClicks === 9 && buttons != ("")) {
             winnerMessage.innerText = ("Bogus, you kooks drew")
         }
 }
 
+for (let icon of shredder) {
+    icon.addEventListener('click', handleShredder)
 
+}
+
+function handleShredder(event) {
+    let btn = event.target;
+    btn.disabled = true
+
+
+    if (playerOne === false) {
+        playerOne = true
+        playerO = btn.innerText
+    } else {
+        playerOne = false
+        playerX = btn.innerText
+        console.log(playerX);
+    }
+    disableIconBtns()
+}
+
+function disableIconBtns() {
+
+    for (let button of shredder) {  
+        if (btnClicks === 2) {
+            button.disable = true
+        }
+    }
+}
 
 
 

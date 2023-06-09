@@ -5,7 +5,7 @@
 Tic-Tac-Woah, the most bodacious of games!
 
 
-![Alt text](./images/Tic-Tac-Woah.png?raw=true)
+![Alt text](./images/updatedOpeningScreen.png?raw=true)
 
 ## Description
 

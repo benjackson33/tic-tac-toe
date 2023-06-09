@@ -15,6 +15,7 @@ The gnarliest of all tic-tac-toe's on the internet. Two player game, shred the g
 
 https://benjackson33.github.io/tic-tac-woah/
 
+- Player one choose a character then, player two your turn.
 - Feel like rocking out while you play, button's top left.
 Or chill out with some ocean sounds, same spot. Stay mellow.
 - Click on a square to start, surfer goes first

@@ -156,7 +156,7 @@ for (let icon of shredder) {
 function handleShredder(event) {
     let btn = event.target;
     btn.disabled = true
-    btnClicks++
+    
 
     if (playerOne === false) {
         playerOne = true

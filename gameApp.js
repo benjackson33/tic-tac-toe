@@ -68,7 +68,7 @@ function theWinner() {
 
 
         } else if (c1.innerText === playerX && c2.innerText === playerX && c3.innerText === playerX) {
-            winnerMessage.innerText = `WOAH! The ${playerX} wiped out the ${playerO}`
+            winnerMessage.innerText = `WOAH! The ${playerX} took out ${playerO}`
 
             endGame()
             noWayPlay()
@@ -158,7 +158,7 @@ for (let icon of shredder) {
 function handleShredder(event) {
     let btn = event.target;
     btn.disabled = true
-
+    btnClicks++
 
     if (playerOne === false) {
         playerOne = true
@@ -166,19 +166,18 @@ function handleShredder(event) {
     } else {
         playerOne = false
         playerX = btn.innerText
-        console.log(playerX);
+        disableIconBtns()
     }
-    disableIconBtns()
+    
 }
 
 function disableIconBtns() {
 
     for (let button of shredder) {  
-        if (btnClicks === 2) {
-            button.disable = true
+        button.disabled = true
         }
     }
-}
+
 
 
 

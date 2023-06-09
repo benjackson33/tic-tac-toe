@@ -13,7 +13,7 @@ The gnarliest of all tic-tac-toe's on the internet. Two player game, shred the g
 
 ## Getting Started
 
-https://benjackson33.github.io/tic-tac-toe/
+https://benjackson33.github.io/tic-tac-woah/
 
 - Feel like rocking out while you play, button's top left.
 Or chill out with some ocean sounds, same spot. Stay mellow.
@@ -40,7 +40,7 @@ The whole theme of Tic-Tac-Woah was born from writing woah instead of toe. I kne
 Come across a couple of hiccups on the road to gnardom, the most tricky part being coding who came out on top, 🏄‍♂️ or 🌊! Working through the code logging and revisng to ensure all variables where containg the data they should be, I would like to stream line this area too. The draw function is also a bit messy and would like to smoothen that out.
 
 ### Desired new features
-- New features would also be gnarly, like a option to choose your shredder. 
+- ~~New features would also be gnarly, like a option to choose your shredder.~~ **Now included**
 - Theme change eg. mountain
 
 ### Known Issues in Tic-Tac-Woah v  1.0

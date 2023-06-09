@@ -43,8 +43,6 @@ function handleChoice(event) {
     theWinner();
 }
 
-//DECIDE THE WINNER
-
 const winnerBtns = [
     [1, 4, 7], [2, 5, 8],
     [1, 2, 3], [4, 5, 6],
@@ -62,7 +60,7 @@ function theWinner() {
         let c2 = gridBtns[condition2 - 1]
         let c3 = gridBtns[condition3 - 1]
         if (c1.innerText === playerO && c2.innerText === playerO && c3.innerText === playerO) {
-            winnerMessage.innerText = `Gnarly! ${playerO} conquered the ${playerX}`
+            winnerMessage.innerText = `Gnarly! ${playerO} defeated the ${playerX}`
             endGame()
             awesomePlay()
 
